@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chúc Mừng 20/10</title>
+<style>
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(#fff8f0,#fff0f8)}
+.container{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.card{background:rgba(255,255,255,.9);padding:28px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12);text-align:center;max-width:760px}
+h1{color:#b02e5c;margin:0 0 8px;font-size:28px}
+p{margin:0;font-size:18px;color:#222;line-height:1.5}
+.flowers{pointer-events:none;position:fixed;inset:0;overflow:hidden;z-index:0}
+.petal{position:absolute;opacity:.95;font-size:22px;animation:f 7s linear infinite}
+@keyframes f{0%{transform:translateY(-10vh) rotate(0);opacity:0}10%{opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" role="main">
+    <h1>Chúc Mẹ và Ốc tiêu 20/10 🌸</h1>
+    <p>Chúc Mẹ và Ốc tiêu ngày Phụ nữ Việt Nam 20/10 vui vẻ! Chúc cả hai luôn xinh đẹp, tràn đầy sức sống và thành công trong cuộc sống của mình</p>
+  </div>
+</div>
+<div class="flowers" id="F"></div>
+<script>
+const S=['🌸','🌺','🌼','💐'];const C=document.getElementById('F');
+for(let i=0;i<20;i++){let e=document.createElement('div');e.className='petal';e.textContent=S[Math.floor(Math.random()*S.length)];e.style.left=(Math.random()*100)+'vw';e.style.fontSize=(12+Math.random()*28)+'px';e.style.animationDelay=(Math.random()*-7)+'s';C.appendChild(e)}
+</script>
+</body>
+</html>
